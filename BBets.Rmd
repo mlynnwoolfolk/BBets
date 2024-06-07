@@ -113,10 +113,12 @@ print(uci)
 28 people in the class then the 2:3 bet is about fair.
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
-
+For the bet to be fair, in a classroom there would need to be 28 people in the class with the ratio of 2:3. Meaning28 participants in the class. 
 
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
+28 in the class to be consideed a fair ratio 2:3.
+ 
