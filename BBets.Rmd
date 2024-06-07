@@ -48,7 +48,7 @@ Assume we do this bet 40 times
 ```{r}
 bank = vector ('numeric')
 for (i in 1 : 100)   {
- bank [i] = BrLw(35, 1, 637)  
+bank [i] = BrLw(35, 2, 637)  
  
 }
  print(bank[1:10])
@@ -58,36 +58,61 @@ lci=mean(bank)-sqrt(var(bank))*1.96
 uci=mean(bank)+ sqrt(var(bank))*1.96
 print(lci)
 print(uci)
+
 ```
-average profit equals to about $280
+Average profit equals to about $280.
 
 ```{r}
-varbank =var(bank)
+varbank=var(bank)
 lci=mean(bank)-sqrt(var(bank))*1.96
-uci=mean(bank)+ sqrt(var(bank))*1.96
+uci=mean(bank)+sqrt(var(bank))*1.96
 print(lci)
 print(uci)
 
-
 ```
-
 
 # What are the fair odds? Use manipulation of odds in the function to tune Brownlows earnings to zero. 
 
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
+```{r}
+bank = vector('numeric')
+for (i in 1:100) {
+bank [i] = BrLw(35, 4.5, 637)
 
+}
+print(bank[1:10])
+print(mean(bank)) 
+hist(bank)
+lci = mean(bank) - sqrt(var(bank))*1.96
+uci = mean(bank)+sqrt(var(bank))*1.96
+print(lci)
+print(uci)
 
+```
+The amount of money Dr. J has to pay would be $4.50.
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
+```{r}
+bank = vector('numeric')
+for (i in 1:100) {
+bank [i] = BrLw(35, 4.5, 637)
+
+}
+print(bank[1:10])
+print(mean(bank)) 
+hist(bank)
+lci = mean(bank) - sqrt(var(bank))*1.96
+uci = mean(bank)+sqrt(var(bank))*1.96
+print(lci)
+print(uci)
+
+```
+28 people in the class then the 2:3 bet is about fair.
+
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
-
-
-
-
-
 
 
 
